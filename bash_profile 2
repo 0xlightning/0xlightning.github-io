@@ -61,6 +61,7 @@ digit(){
 dig @8.8.8.8 $1 CNAME
 }
 
+
 wordlist(){
 cd ~/tools/dirsearch/db
 }
