@@ -1,3 +1,4 @@
+
 # Apt
 alias acs='apt-cache search'
 alias upgrade='apt-get upgrade'
@@ -9,6 +10,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias ..='cd ..'
 alias a='alias'
+alias logo='figlet'
 
 # Unzip files
 alias zip='unzip'
@@ -18,13 +20,13 @@ alias tarb='tar cjvf $1 $2'
 alias untarb='tar xjvf $1'
 alias unbz='tar xjvf $1'
 
-# Chmod 
+# Chmod
 alias 700='chmod 700'
 alias 600='chmod 600'
 alias +x='chmod +x'
 
 #prevent accidental deletion / move / copy
-alias rm='rm -i'
+alias rm='rm'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rd='rmdir'
@@ -79,3 +81,7 @@ alias gpush="git push origin master"
 alias gpull="git pull origin master"
 alias gco="git checkout"
 alias gd="git diff"
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
