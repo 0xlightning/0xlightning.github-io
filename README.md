@@ -8,7 +8,7 @@ Hello world, In daily world i came across lot of topics across information secur
 ```
 ## Wordlists  
 
-Created Own Wordlist for testing web application [link](https://github.com/lightningsarp/Own_Wordlist)
+Created Own Wordlist for testing web application [link](https://github.com/0xlightning/Own_Wordlist)
 
 ## Bio
  intrested in ctf's 
