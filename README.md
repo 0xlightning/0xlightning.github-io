@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to lightningzero github page
 
 You can use the [editor on GitHub](https://github.com/0xlightning/0xlightning.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
