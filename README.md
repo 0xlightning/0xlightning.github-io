@@ -2,15 +2,15 @@
 
 ### Hi there, I am ks praveen <img src="https://raw.githubusercontent.com/0xlightning/0xlightning/main/iteams/Hi.gif" height="30" width="30" /> most of them know me as 0xlightning
 
-![image](/iteams/programer.gif)
+![image](https://raw.githubusercontent.com/0xlightning/0xlightning/main/iteams/programer.gif)
 
-- **🔭 I’m currently Web Developer (Code & No Code)**
+- **🔭 I’m currently a Web Developer (Code & No Code)**
 - **🌱 I’m currently learning machine learning**
-- **👯 I’m looking for collaboraters on ML AI**
-- **🤔 I’m looking for help with creating a data science career**
-- **💬 Ask me about website Development**
-- **😄 Pronouns: Too reach the top spot one day...**
-- **⚡ Fun fact: doing crazy than you through:?**
+- **👯 I’m looking for collaborators on ML/AI**
+- **🤔 I’m looking for help with starting a data science career**
+- **💬 Ask me about website development**
+- **😄 Pronouns: To reach the top spot one day...**
+- **⚡ Fun fact: I'm more adventurous than you'd think!**
 
 [![@0xlightning's Holopin board](https://holopin.io/api/user/board?user=0xlightning)](https://holopin.io/@0xlightning)
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=0xlightning&label=Views&color=blue&style=plastic" alt="0xlightning" /> </p>
@@ -38,14 +38,14 @@ Website (Code) :
 <a href="https://reactjs.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React JS" width="40" height="40"/> </a> 
 <a href="https://redux.js.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="Redux" width="40" height="40"/> </a> 
 
-Website (Code) :
+Website (No Code) :
 <a href="https://www.shopify.com/" target="_blank"> <img src="https://avatars.githubusercontent.com/u/8085?s=200&v=4" alt="Shopify" width="40" height="40"/> </a> 
 <a href="https://www.framer.com/" target="_blank"> <img src="https://avatars.githubusercontent.com/u/42876?s=200&v=4" alt="Framer" width="40" height="40"/> </a> 
 <a href="https://webflow.com/" target="_blank"> <img src="https://avatars.githubusercontent.com/u/1229663?s=200&v=4" alt="Webflow" width="40" height="40"/> </a> 
 
 Operating System :
 <a href="https://www.linux.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux Kernal" width="40" height="40"/> </a>
-<a href="https://www.microsoft.com/en-in/windows" target="_blank"> <img src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Microsoft-365?wid=40&hei=40" alt="Winodows" width="40" height="40"/> </a>
+<a href="https://www.microsoft.com/en-in/windows" target="_blank"> <img src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Microsoft-365?wid=40&hei=40" alt="Windows" width="40" height="40"/> </a>
 <a href="https://parrotsec.org/" target="_blank"> <img src="https://avatars.githubusercontent.com/u/8180780?s=200&v=4" alt="Parrot OS" width="40" height="40"/> </a>
 <a href="https://ubuntu.com/" target="_blank"> <img src="https://avatars.githubusercontent.com/u/4604537?s=200&v=4" alt="Ubuntu OS" width="40" height="40"/> </a>
 </p>
