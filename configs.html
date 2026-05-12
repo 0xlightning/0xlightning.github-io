@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configs | 0xlightning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="brand">0xlightning</div>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="configs.html">Configs</a>
+                <a href="writeups/index.html">Writeups</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Shell Configurations</h1>
+            <p>A collection of my personalized shell configuration files for various environments.</p>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>.bash_profile</h3>
+                    <p>Custom aliases and functions for general use.</p>
+                    <a href="#bash_profile" class="btn">View Content</a>
+                </div>
+                <div class="card">
+                    <h3>BASHRC</h3>
+                    <p>Specific bashrc configurations for Kali, Arch, Mac, and more.</p>
+                    <a href="#bashrc-collection" class="btn">View Collection</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="bash_profile">
+            <h2>.bash_profile</h2>
+            <pre><code># Apt
+alias acs='apt-cache search'
+alias upgrade='apt-get upgrade'
+alias update='apt-get update'
+
+# some more ls aliases
+alias ll='ls -al'
+alias la='ls -A'
+alias l='ls -CF'
+alias ..='cd ..'
+alias a='alias'
+
+# Unzip files
+alias zip='unzip'
+alias tarr='tar czvf $1 $2'
+alias untar='tar xzvf $1'
+alias tarb='tar cjvf $1 $2'
+alias untarb='tar xjvf $1'
+alias unbz='tar xjvf $1'
+
+# Chmod
+alias 700='chmod 700'
+alias 600='chmod 600'
+alias +x='chmod +x'
+
+#prevent accidental deletion / move / copy
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias rd='rmdir'
+alias mk='mkdir'
+
+# Easy way Recon
+alias d='cd ~/Downloads'
+alias dw='cd ~/Desktop'
+alias burpsuite='cd ~/burpsuite'
+alias p='cd ~/Pictures'
+alias m='cd ~/Music'
+alias htb='cd ~/htb'
+alias cl='clear'
+alias bb='cd ~/Desktop/bb'
+alias home='cd ~'
+alias ex='exit'
+alias hosts='nano /etc/hosts'
+alias n='nano'
+alias vi='vim'
+
+# some more ls aliases
+alias stat='svn stat'
+alias sc='script/console --debugger'
+alias sdb='script/dbconsole'
+alias ss='script/server -u'
+alias prs='touch tmp/restart.txt'
+
+# some more apache aliases
+alias sql='mysql -u root -p'
+alias rsa='systemctl restart apache2'
+alias rsar='systemctl restart apache2'
+alias rsas='systemctl stop apache2'
+
+# Tools
+alias wi="whois"
+alias ns='nslookup'
+
+# Rails
+alias r='rails'
+
+# History
+alias hh='history | tail -n 30'
+alias h='history'
+
+# Git aliases
+alias gs="git status"
+alias ga="git add"
+alias gb="git branch"
+alias gca="git commit -a"
+alias gcm="git commit -m"
+alias gpush="git push origin master"
+alias gpull="git pull origin master"
+alias gco="git checkout"
+alias gd="git diff"</code></pre>
+        </section>
+
+        <section id="bashrc-collection">
+            <h2>BASHRC Collection</h2>
+
+            <div style="margin-top: 20px;">
+                <h3>Kali Linux</h3>
+                <pre><code># ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000</code></pre>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <h3>Arch Linux</h3>
+                <pre><code>#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+PS1='[\u@\h \W]\$ '</code></pre>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <h3>macOS (MAMP)</h3>
+                <pre><code># ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+if [ -f /opt/local/etc/bash_completion ]; then
+  . /opt/local/etc/bash_completion
+fi
+
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+# don't put duplicate lines in the history. See bash(1) for more options
+export HISTCONTROL=ignoredups
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
+
+##########################################################################
+function parse_git_branch () {
+       git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u @ \h \[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(parse_git_branch)$ '</code></pre>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <h3>Linux Mint</h3>
+                <pre><code># ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+# don't put duplicate lines in the history. See bash(1) for more options
+export HISTCONTROL=ignoredups
+# ... and ignore same sucessive entries.
+export HISTCONTROL=ignoreboth
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+function parse_git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+}
+
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+}</code></pre>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <h3>Parrot OS</h3>
+                <pre><code># ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+# don't put duplicate lines in the history. See bash(1) for more options
+# ... or force ignoredups and ignorespace
+HISTCONTROL=ignoredups:ignorespace
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ks praveen (0xlightning). Built with HTML, CSS, and JS.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
